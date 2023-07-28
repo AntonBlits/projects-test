@@ -1,0 +1,17 @@
+<div class="projects">
+  <div class="projects__item" *ngFor="let project of projects" [routerLink]="['/projects', project.id]">
+    <div class="projects__item-date">
+      {{ project.startDate | date: 'mediumDate' }} - {{ project.endDate | date: 'mediumDate' }}
+    </div>
+    <div class="projects__item-title">
+      {{ project.subject }}
+    </div>
+    <div class="projects__item-description">
+      {{ project.createdBy }}
+    </div>
+  </div>
+
+  <div class="projects__not-found" *ngIf="!projects.length">
+    Проекты не найдены.
+  </div>
+</div>

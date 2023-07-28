@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 100px;
+  height: calc(100vh - 80px);
+
+  &__projects {
+    width: 500px;
+    height: 100%;
+  }
+
+  &__project-details {
+    width: calc(100% - 600px); // width - projects container + gap
+  }
+}
