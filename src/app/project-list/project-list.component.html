@@ -1,5 +1,8 @@
 <div class="projects">
-  <div class="projects__item" *ngFor="let project of projects" [routerLink]="['/projects', project.id]">
+  <div class="projects__item"
+       *ngFor="let project of projects"
+       [routerLink]="project.id"
+       routerLinkActive="projects__item--active">
     <div class="projects__item-date">
       {{ project.startDate | date: 'mediumDate' }} - {{ project.endDate | date: 'mediumDate' }}
     </div>

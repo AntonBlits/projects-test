@@ -13,7 +13,7 @@ export const routes: Routes = [
     children: [
       {
         path: ':projectId',
-        loadComponent: () => import('./projects/projects.component').then(c => c.ProjectsComponent),
+        loadComponent: () => import('./project-details/project-details.component').then(c => c.ProjectDetailsComponent),
       }
     ]
   },

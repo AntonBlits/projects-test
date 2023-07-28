@@ -1,9 +1,7 @@
 <div class="container">
   <app-project-list class="container__projects" [projects]="projects()"/>
 
-  <app-project-details *ngIf="projectId; else selectProjectMessage" class="container__project-details"/>
-
-  <ng-template #selectProjectMessage>
-    Выберите проект.
-  </ng-template>
+  <div class="container__project-details">
+    <router-outlet></router-outlet>
+  </div>
 </div>

@@ -12,7 +12,7 @@
     border-bottom: 1px solid black;
     cursor: pointer;
 
-    &:hover {
+    &:hover:not(&--active) {
       background-color: #f5f5f5;
     }
 
@@ -23,6 +23,10 @@
     &-date, &-description {
       color: gray;
       font-size: 0.875rem;
+    }
+
+    &--active {
+      background-color: #cecece;
     }
   }
 }

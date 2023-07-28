@@ -1,1 +1,51 @@
-<p>project-details works!</p>
+<div class="project-details" [formGroup]="projectForm">
+  <h2 class="project-details__title">
+    <input type="text" formControlName="subject">
+  </h2>
+  <div class="project-details__details">
+    <div class="project-details__details__container">
+      <div class="project-details__label">
+        Дата начала
+      </div>
+
+      <div class="project-details__text">
+        <input type="text" formControlName="startDate">
+      </div>
+    </div>
+
+    <div class="project-details__details__container">
+      <div class="project-details__label">
+        Дата окончания
+      </div>
+
+      <div class="project-details__text">
+        <input type="text" formControlName="endDate">
+      </div>
+    </div>
+
+    <div class="project-details__details__container">
+      <div class="project-details__label">
+        Автор
+      </div>
+
+      <div class="project-details__text">
+        <input type="text" formControlName="createdBy">
+      </div>
+    </div>
+  </div>
+
+  <div class="project-details__details__container project-details__details__container--mt">
+    <div class="project-details__label">
+      Описание
+    </div>
+
+    <div class="project-details__text">
+      <textarea formControlName="description"></textarea>
+    </div>
+  </div>
+
+  <div class="project-details__actions">
+    <button class="project-details__button" *ngIf="projectForm.disabled" (click)="projectForm.enable()">Изменить</button>
+    <button class="project-details__button" *ngIf="projectForm.enabled" (click)="saveProject()">Сохранить</button>
+  </div>
+</div>

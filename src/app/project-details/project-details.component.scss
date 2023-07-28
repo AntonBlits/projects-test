@@ -1,0 +1,38 @@
+.project-details {
+  &__title {
+    text-align: center;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    &__container {
+      &--mt {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__label {
+    color: gray;
+  }
+
+  &__button {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+input[disabled], textarea[disabled] {
+  border: none;
+  outline: none;
+  background: transparent;
+}
