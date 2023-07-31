@@ -2,7 +2,7 @@ import {computed, Injectable, Signal, signal} from '@angular/core';
 import {Project, Projects} from './core/interfaces/project.interface';
 
 const PROJECTS = 'projects';
-const PROJECTS_FALLBACK = '{Projects: []}';
+const PROJECTS_FALLBACK = '{"Projects": []}';
 
 @Injectable({
   providedIn: 'root'
